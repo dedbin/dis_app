@@ -136,7 +136,6 @@ export const InitialModal = () => {
                     </Form>
             </DialogContent>
         </Dialog>
-     );
+     )
 }
  
-export default InitialModal;
