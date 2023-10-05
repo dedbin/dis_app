@@ -76,8 +76,10 @@ export const CreateServerModal = () => {
           <DialogTitle className="text-2xl text-center font-bold">
             Customize your server
           </DialogTitle>
-          <DialogDescription className="text-center text-zinc-500">
-            Give your server a personality with a name and an image. You can always change it later.
+          <DialogDescription 
+          className="text-center
+           text-zinc-500">
+          Give your server a personality with a name and a logo. You can change these later.
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
@@ -93,7 +95,8 @@ export const CreateServerModal = () => {
                         <FileUpload
                         endpoint="serverImage"
                         value={field.value}
-                        onChange={field.onChange}/>
+                        onChange={field.onChange}
+                        />
                       </FormControl>
                     </FormItem>
                   )}
@@ -124,7 +127,10 @@ export const CreateServerModal = () => {
               />
             </div>
             <DialogFooter className="bg-gray-100 px-6 py-4">
-              <Button variant="primary" disabled={isLoading}>
+              <Button 
+              variant="primary"
+               type="submit" 
+               disabled={isLoading}>
                 Create
               </Button>
             </DialogFooter>

@@ -33,7 +33,7 @@ import { useRouter } from "next/navigation";
       name: z.string().min(1, { 
         message: "Server name is required" 
       }),
-      logoUrl: z.string().min(1, {
+      imageUrl: z.string().min(1, {
         message: "Server logo is required"
       })
   });
@@ -49,7 +49,7 @@ export const InitialModal = () => {
         resolver: zodResolver(formSchema),
         defaultValues: {
             name: "",
-            logoUrl: "",
+            imageUrl: "",
         },
     });
 
@@ -86,7 +86,7 @@ export const InitialModal = () => {
                                 <div className="flex items-center justify-center text-center">
                                     <FormField
                                     control={form.control}
-                                    name="logoUrl"
+                                    name="imageUrl"
                                     render={({field}) => (
                                         <FormItem>
                                             <FormControl>

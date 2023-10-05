@@ -6,7 +6,7 @@ import {MemberRole} from "@prisma/client";
 
 export async function POST (req:Request) {
     try {
-        const {name, logoUrl} = await req.json();
+        const {name, imageUrl} = await req.json();
         const profile = await currentProfile();
         if (!profile) {
             return new NextResponse("Unauthorized", {
@@ -15,7 +15,7 @@ export async function POST (req:Request) {
         }
         const server = await db.server.create({
             data: {
-                imageUrl: logoUrl,
+                imageUrl: imageUrl,
                 profileId: profile.id,
                 name,
                 inviteCode: uuidv4(),
