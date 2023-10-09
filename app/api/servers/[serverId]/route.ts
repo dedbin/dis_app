@@ -2,6 +2,9 @@ import { currentProfile } from "@/lib/current-profile";
 import { db } from "@/lib/db";
 import { NextResponse } from "next/server";
 
+/**
+ * Updates a server's name and image URL.
+ */
 export async function PATCH(
     req:Request,
     {params}: {params: {serverId: string}}

@@ -2,6 +2,9 @@ import { currentProfile } from "@/lib/current-profile";
 import { db } from "@/lib/db";
 import { NextResponse } from "next/server";
 
+/**
+ * Deletes a member from a server.
+ */
 export async function DELETE(req:Request, {params}: {params: {memberId: string}}) {
     try {
         const profile = await currentProfile();
@@ -46,6 +49,9 @@ export async function DELETE(req:Request, {params}: {params: {memberId: string}}
     }
 }
 
+/**
+ * Updates a member's role in a server.
+ */
 export async function PATCH(req:Request, {params}: {params: {memberId: string}}) {
     try{
         const profile = await currentProfile();

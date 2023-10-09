@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   description: 'First version of dis app',
 }
 
+/**
+ * Renders the root layout for the site.
+ */
 export default function RootLayout({
   children,
 }: {

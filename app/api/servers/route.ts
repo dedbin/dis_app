@@ -4,6 +4,9 @@ import { NextResponse } from "next/server";
 import { v4 as uuidv4 } from "uuid";
 import {MemberRole} from "@prisma/client";
 
+/**
+ * Creates a new server with the given name and imageURL. 
+ */
 export async function POST (req:Request) {
     try {
         const {name, imageUrl} = await req.json();

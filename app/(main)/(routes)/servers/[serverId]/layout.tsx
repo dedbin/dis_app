@@ -4,6 +4,11 @@ import { db } from "@/lib/db";
 import { redirectToSignIn } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
+/**
+ * Renders the layout for a specific server ID.
+ * If the server does not exist, redirect to the home page.
+ * If the user is not logged in, redirect to the sign in page.
+ */
 const ServerIdLayout = async ({
     children,
     params
