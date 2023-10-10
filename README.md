@@ -111,4 +111,4 @@ git commit -m "Add new feature: your feature name"
 
 ## Лицензия
 <a id="license"></a>
-Вы можете найти данную лицензию [здесь](https://github.com/dedbin/dis_app/LICENSE).
+Вы можете найти данную лицензию [здесь](https://github.com/dedbin/dis_app/blob/master/LICENSE).
