@@ -20,7 +20,7 @@ const iconMap = {
 }
 
 export const ServerChannel = ({channel, server, role}: ServerChannelProps) => {
-  const { onOpen } = useModal();
+  const {onOpen} = useModal();
   const params = useParams();
   const router = useRouter();
 
@@ -31,7 +31,6 @@ export const ServerChannel = ({channel, server, role}: ServerChannelProps) => {
 
   return (
     <button
-      onClick={onClick}
         className={cn("group px-2 py-2 rounded-md flex items-center gap-x-2 w-full hover:bg-zinc-700/10 dark:hover:bg-zinc-700/50 transition mb-1",
         params?.channelId === channel.id && "bg-zinc-700/10 dark:bg-zinc-700/50")}
         >
@@ -46,7 +45,10 @@ export const ServerChannel = ({channel, server, role}: ServerChannelProps) => {
           <Edit className="h-4 w-4 hidden group-hover:block text-zinc-500 hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-zinc-300 transition"/>
           </ActionTooltip>
           <ActionTooltip label="delete">
-          <Trash className="h-4 w-4 hidden group-hover:block text-rose-500 hover:text-rose-600 dark:text-rose-400 dark:hover:text-rose-300 transition"/>
+          <Trash 
+          className="h-4 w-4 hidden group-hover:block text-rose-500 hover:text-rose-600 dark:text-rose-400 dark:hover:text-rose-300 transition" 
+          onClick={() => onOpen('deleteChannel', {server, channel})}
+          />
           </ActionTooltip>
         </div>
       )}
