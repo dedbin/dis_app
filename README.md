@@ -1,11 +1,15 @@
 # Dis app
 
-
 ![logo.png](app/logo.png)
+
+[![license](https://img.shields.io/badge/license-mit-brightgreen.svg)](https://en.wikipedia.org/wiki/MIT_License)
+![Visitor Count](https://profile-counter.glitch.me/dedbin/count.svg)
+
 
 
 Это репозиторий для моего школьного проекта который представляет собой подобие Discord. 
-tech stack: Next.js, React, Prisma, Tailwind, Postgres
+
+tech stack: Next.js, React,Typescript, Prisma, Tailwind, Postgres
 
 ## Таблица контента
 
@@ -31,7 +35,6 @@ tech stack: Next.js, React, Prisma, Tailwind, Postgres
 <a id="TODO"></a>
 - Обмен сообщениями в режиме реального времени с использованием Socket.io
 - Рендер страницы канала
-- Возможность выйти с сервера и его удаление
 - deploy
 
 ### Зависимости
