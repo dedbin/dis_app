@@ -11,16 +11,17 @@
 
 tech stack: Next.js, React,Typescript, Prisma, Tailwind, Postgres, Socket.io, Clerk
 
-## Таблица контента
+# Таблица контента
 
+- [Функционал](#functionality)
 - [TODO](#TODO)
 - [Зависимости](#dependencies)
 - [Запуск приложения](#running-the-app)
 - [Вклад в проект](#contributing)
 - [Лицензия](#license)
 
-Функционал:
-
+## Функционал:
+<a id="functionality"></a>
 - Управление участниками (Исключение, Изменение роли Гостя/Модератора)
 - Генерация уникальной ссылки-приглашения и полностью работающая система приглашений
 - Создание и настройка сервера
@@ -30,6 +31,8 @@ tech stack: Next.js, React,Typescript, Prisma, Tailwind, Postgres, Socket.io, Cl
 - ORM с использованием Prisma
 - База данных Postgres
 - Аутентификация с использованием Clerk
+- Отправка фото, файлов, видео в качестве сообщения
+- Отправка сообщений с эмодзи 
 
 ## TODO
 <a id="TODO"></a>
@@ -38,14 +41,17 @@ tech stack: Next.js, React,Typescript, Prisma, Tailwind, Postgres, Socket.io, Cl
 - Сделать видеозвонки, обычные звонки(?)
 - Сделать панель с эмодзи 
 - Попробовать написать/найти модель для генерации эмодзи/стикеров
+- Сделать локализацию 
 - deploy
 
-### Зависимости
+## Зависимости
 <a id="dependencies"></a>
-Версия Node 18.x.x
+* Версия Node 18.x.x
+* Версия Postgres 16.x.x
 
 ## Запуск приложения
 <a id="running-the-app"></a>
+
 ### Клонирование репозитория
 
 ``` shell
@@ -75,7 +81,7 @@ UPLOADTHING_URL =
 ```
 ### Настройка Prisma
 
-Добавьте базу данных Postgres
+#### Добавьте базу данных Postgres
 
 ``` shell
 npx prisma generate
