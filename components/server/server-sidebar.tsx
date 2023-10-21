@@ -10,6 +10,7 @@ import { Separator } from "../ui/separator";
 import { ServerSection } from "./server-section";
 import { ServerChannel } from "./server-channel";
 import { ServerMember } from "./server-member";
+import { ServerCrash } from "./server-crash";
 
 interface ServerSidebarProps {
     serverId: string;
