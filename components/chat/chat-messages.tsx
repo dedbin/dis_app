@@ -6,6 +6,8 @@ import { useChatQuery } from "@/hooks/use-chat-query";
 import { Fragment } from "react";
 import { Loader2, ServerCrash } from "lucide-react";
 import { MessageWithMemberWithProfile } from "@/types";
+import { ChatItem } from "./chat-item";
+import {format} from "date-fns";
 
 interface ChatMessagesProps {
     name: string;
@@ -31,7 +33,7 @@ export const ChatMessages = ({
     paramValue
 }: ChatMessagesProps) => {
     const queryKey = `chat:${chatId}`;
-
+    const data_format = 'd MMM yyyy HH:mm:ss';
     const {
         data,
         fetchNextPage,
@@ -59,22 +61,32 @@ export const ChatMessages = ({
             </div>;
       }
 
-    return (
+      return (
         <div className="flex flex-col flex-1 py-4 overflow-y-auto">
-            <div className="flex-1"/>
-            <ChatWelcome
+          <div className="flex-1"/>
+          <ChatWelcome
                 name={name}
                 type={type}
             />
-            <div className="flex flex-col-reverse mt-auto">
-                {data?.pages?.map((group, i) => (
-                    <Fragment key={i}>
-                         {group.items.map((message: MessageWithMemberWithProfile) => (
-                            <div key={message.id}>
-                                {message.content}
-                            </div>
-                         ))}
-                    </Fragment>
+          <div className="flex flex-col-reverse mt-auto">
+            {data?.pages?.map((group, i) => (
+                <Fragment key={i}>
+                    {group.items.map((message: MessageWithMemberWithProfile) => (
+                        <ChatItem
+                            currentMember={member}
+                            key={message.id}
+                            id={message.id}
+                            content={message.content}
+                            member={message.member}
+                            time={format(new Date(message.createdAt), data_format)}
+                            fileUrl={message.fileUrl}
+                            deleted={message.deleted}
+                            isUpdate={message.updatedAt !== message.createdAt}
+                            socketUrl={socketUrl}
+                            socketQuery={socketQuery}
+                        />
+                    ))}
+                </Fragment>
                 ))}
             </div>
         </div>
