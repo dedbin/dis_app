@@ -19,6 +19,7 @@ tech stack: Next.js, React,Typescript, Prisma, Tailwind, Postgres, Socket.io, Cl
 - [Запуск приложения](#running-the-app)
 - [Вклад в проект](#contributing)
 - [Лицензия](#license)
+- [Codebase](#codebase)
 
 ## Функционал:
 <a id="functionality"></a>
@@ -124,3 +125,21 @@ git commit -m "Add new feature: your feature name"
 ## Лицензия
 <a id="license"></a>
 Вы можете найти данную лицензию [здесь](https://github.com/dedbin/dis_app/blob/master/LICENSE).
+
+
+## Codebase
+<a id="codebase"></a>
+
+*2023-10-22*
+
+  Всего: 
+  - 101 файл
+  - 12054 строк кода
+  - 71 комментарий
+  - 651 пустая строка
+  - всего 12776 строк 
+
+Наиболее часто используемые языки: 
+- TypeScript JSX - 63 файлов, 3,942 строки кода.
+- JSON - 4 файлов, 6,955 строки кода.
+- TypeScript - 25 файлов, 780 строки кода.
