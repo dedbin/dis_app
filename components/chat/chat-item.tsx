@@ -113,7 +113,7 @@ export const ChatItem = ({
     const canEditMessage = !deleted &&  isOwner && !fileUrl;
 
     const isPdf = fileType === "pdf" && fileUrl;
-    const isVideo = fileType === "mp4" && fileUrl;
+    const isVideo = (fileType === "mp4" || fileType === "mov" || fileType === "mkv" || fileType === "avi" ) && fileUrl;
     const isImage = (fileType === "png" || fileType === "jpg" || fileType === "jpeg") && fileUrl;
 
 
@@ -142,7 +142,7 @@ export const ChatItem = ({
                         href={fileUrl} 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="relative aspect-square rounded-md mt-2 overflow-hidden border flex items-center bg-secondary h-45 w-45">
+                        className="relative aspect-square rounded-md mt-2 overflow-hidden border flex items-center bg-secondary h-40 w-40">
                             <Image src={fileUrl} alt={content} fill className="object-cover" />
                         </a>
                         
@@ -152,8 +152,8 @@ export const ChatItem = ({
                         href={fileUrl} 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="relative aspect-video rounded-md mt-2 overflow-hidden border flex items-center bg-secondary h-45 w-45">
-                            <CustomVideoPlayer src={fileUrl} controls autoPlay className="rounded-md mt-2 h-45 w-45" />
+                        className="relative aspect-video rounded-md mt-2 overflow-hidden border flex items-center bg-secondary h-40 w-[40%]">
+                            <CustomVideoPlayer src={fileUrl} controls autoPlay className="rounded-md mt-2 h-40 w-45" />
                         </a>
                     )}
                     {isPdf && (

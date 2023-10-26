@@ -59,7 +59,7 @@ export const FileUpload = ({
       </div>
     )
   }
-  if (value && fileType === "mp4") {
+  if (value && (fileType === "mp4" || fileType === "mov" || fileType === "mkv" || fileType === "avi")) {
     return (
       <div className="relative h-60 w-60">
       <video className="h-60 w-60" controls>
