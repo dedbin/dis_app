@@ -36,3 +36,10 @@ yarn-error.log*
 next-env.d.ts
 
 .VSCodeCounter
+.vscode
+
+main.cpp
+main.exe
+main1.py
+main.py
+__pycache__
