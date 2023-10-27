@@ -31,7 +31,7 @@ import { useRouter } from "next/navigation";
 
 const roleIconMap = {
   "GUEST": null,
-  "MODERATOR": <ShieldCheck className="ml-2 h-5 w-5" />,
+  "MODERATOR": <ShieldCheck className="ml-2 h-5 w-5 text-[#10b981]" />,
   "ADMIN": <ShieldAlert className="ml-2 h-5 w-5 text-rose-600" />,
 }
 

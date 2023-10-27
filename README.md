@@ -48,6 +48,7 @@ tech stack: Next.js, React,Typescript, Prisma, Tailwind, Postgres, Socket.io, Cl
 <a id="dependencies"></a>
 * Версия Node 18.x.x
 * Версия Postgres 16.x.x
+* Версия npm 10.x.x
 
 ## Запуск приложения
 <a id="running-the-app"></a>

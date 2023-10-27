@@ -12,12 +12,11 @@ const font = Open_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Dis App',
-  description: 'First version of dis app',
+  description: 'simple social network',
 }
 
-/**
- * Renders the root layout for the site.
- */
+/* Renders the root layout for the site.*/
+
 export default function RootLayout({
   children,
 }: {
@@ -45,5 +44,5 @@ export default function RootLayout({
         </body>
       </html>
     </ClerkProvider>
-  )
+  );
 }
