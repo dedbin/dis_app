@@ -17,6 +17,7 @@ import { useForm } from "react-hook-form";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { useModal } from "@/hooks/use-modal-store";
+import { useParams, useRouter } from "next/navigation";
 
 interface ChatItemProps {
     id: string;
@@ -64,7 +65,8 @@ export const ChatItem = ({
 }: ChatItemProps) => {
     const [isEditing, setIsEditing] = useState(false);
     const {onOpen} = useModal();
-
+    const params = useParams();
+    const router = useRouter();
     const fileType = fileUrl?.split(".").pop();
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -72,6 +74,13 @@ export const ChatItem = ({
             content: content
         }
     });
+
+    const onMemberClick = () => {
+        if (member.id === currentMember.id) {
+            return;
+        }
+        router.push(`/servers/${params?.serverId}/conversations/${member.id}`);
+    };
 
     useEffect(() => {
         const handleKeydown = (e: KeyboardEvent) => {
@@ -121,13 +130,13 @@ export const ChatItem = ({
     return (
         <div className="relative group flex items-center hover:bg-black/5 p-4 transition w-full">
             <div className="group flex gap-x-2 items-start w-full">
-                <div className="cursor-pointer hover:drop-shadow-md transition">
+                <div onClick={onMemberClick} className="cursor-pointer hover:drop-shadow-md transition">
                     <UserAvatar src={member.profile.imageUrl}/>
                 </div>
                 <div className="flex flex-col w-full hover:bg-zinc-700/10">
                     <div className="flex items-center gap-x-2">
                         <div className="flex items-center">
-                            <p className="text-sm font-semibold hover:underline cursor-pointer">
+                            <p onClick={onMemberClick} className="text-sm font-semibold hover:underline cursor-pointer">
                                 {member.profile.name}
                             </p>
                             <ActionTooltip label={member.role}>
@@ -152,8 +161,8 @@ export const ChatItem = ({
                         href={fileUrl} 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="relative aspect-video rounded-md mt-2 overflow-hidden border flex items-center bg-secondary h-40 w-[40%]">
-                            <CustomVideoPlayer src={fileUrl} controls autoPlay className="rounded-md mt-2 h-40 w-45" />
+                        className="relative aspect-video rounded-md mt-2 overflow-hidden flex items-center h-40 w-45">
+                            <CustomVideoPlayer src={fileUrl} controls className="rounded-md mt-2 h-40 w-45" />
                         </a>
                     )}
                     {isPdf && (
