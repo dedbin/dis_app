@@ -13,7 +13,7 @@ export const ChatWelcome = ({name, type}: ChatWelcomeProps) => {
                 </div>
             )}
             <p className="text-xl md:text-3xl font-bold">
-                {type === 'channel' ? 'welcome to #' : ''}{name}
+                {type === 'channel' ? 'welcome to #' : 'this is chat with '}<span className="text-emerald-500">{name}</span>
             </p>
             
         </div>
