@@ -2,7 +2,7 @@
 
 ![logo.png](app/logo.png)
 
-[![license](https://img.shields.io/badge/license-mit-brightgreen.svg)](https://github.com/dedbin/dis_app/blob/master/LICENSE)
+[![license](https://img.shields.io/badge/license-mit-brightgreen.svg)](https://github.com/dedbin/dis_app/blob/master/LICENSE) 
 ![Visitor Count](https://profile-counter.glitch.me/dedbin/count.svg)
 
 
@@ -40,13 +40,16 @@ tech stack: Next.js, React,Typescript, Prisma, Tailwind, Postgres, Socket.io, Cl
 ## TODO
 <a id="TODO"></a>
 - Сделать видеозвонки, обычные звонки(?)
+- Настроить https 
+- Сделать локализацию 
+- [!Самое важное!] Сделать шифрование сообщений в базе данных
+- Сделать поиск сообщений
+- Сделать логи с возможностью как записи в файл, так и отправкой в телеграмм
 - Попробовать написать/найти модель для генерации эмодзи/стикеров
 - Дать возможность для создания собственных стикеров
-- Сделать поиск сообщений
+- Сделать ответы на сообщение
+- Сделать "был в сети [время]"
 - Сделать голосовые сообщения
-- Сделать локализацию 
-- Сделать логи с возможностью как записи в файл, так и отправкой в телеграмм
-- deploy
 
 ## Зависимости
 <a id="dependencies"></a>
@@ -70,7 +73,7 @@ npm i
 ### Настройка файла .env
 
 
-``` js
+``` ts
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
 CLERK_SECRET_KEY=
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=
