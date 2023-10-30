@@ -39,7 +39,6 @@ tech stack: Next.js, React,Typescript, Prisma, Tailwind, Postgres, Socket.io, Cl
 
 ## TODO
 <a id="TODO"></a>
-- Сделать видеозвонки, обычные звонки(?)
 - Настроить https 
 - Сделать локализацию 
 - [!Самое важное!] Сделать шифрование сообщений в базе данных
