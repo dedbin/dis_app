@@ -5,7 +5,7 @@ import { LandingContent } from "@/components/landing-content";
 
 const LandingPage = () => {
     return ( 
-         <div>
+         <div className="bg-zinc-900">
           <LandingNavbar/>
           <LandingHero/>
           <LandingContent/>
